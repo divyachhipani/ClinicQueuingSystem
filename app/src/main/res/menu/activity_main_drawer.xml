@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Map"
+            android:icon="@drawable/map"
+            android:title="Map" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_queue"
+            android:icon="@drawable/ticket_2"
+            android:title="Queue Ticket" />
+        <item
+            android:id="@+id/nav_queshist"
+            android:icon="@drawable/survery"
+            android:title="Questionnaire History" />
+        <item
+            android:id="@+id/nav_allergy"
+            android:icon="@drawable/drug_allergy"
+            android:title="Drug Allergy" />
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/aboutus"
+                android:title="About Us" />
+        </menu>
+    </item>
+
+</menu>

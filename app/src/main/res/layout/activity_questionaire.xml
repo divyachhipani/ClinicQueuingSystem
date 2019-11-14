@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="56dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/questionnaire" />
+
+        <!-- Toggle Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/tbFever"
+                    style='android:background="@drawable/my_btn_toggle"'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle"
+                    android:text="Fever"
+                    android:textOff="No Fever"
+                    android:textOn="Fever" />
+
+                <ToggleButton
+                    android:id="@+id/tbCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle"
+                    android:text="Cough"
+                    android:textOff="No Cough"
+                    android:textOn="Cough" />
+
+                <ToggleButton
+                    android:id="@+id/tbFlu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle"
+                    android:text="Flu"
+                    android:textOff="No Flu"
+                    android:textOn="Flu" />
+            </LinearLayout>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Other Symptoms Button -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/input_symptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Other Symptoms"
+                android:inputType="text|textMultiLine"
+                android:selectAllOnFocus="false"
+                android:singleLine="false" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Other Countries Spinner -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="gr.escsoft.michaelprimez.searchablespinnerexamples.MainActivity"
+            tools:showIn="@layout/activity_main">
+
+
+            <gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner
+                android:id="@+id/SearchableSpinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:StartSearchTintColor="@android:color/white"
+                app:DoneSearchTintColor="@android:color/white"
+                app:RevealViewBackgroundColor="@color/primary"
+                app:SearchViewBackgroundColor="@color/primary"
+                app:RevealEmptyText="Select Country"
+                app:ShowBorders="false"
+                app:ItemsDivider="@color/gray_400"
+                app:SpinnerExpandHeight="150dp"
+                app:DividerHeight="0.5dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_Submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="Submit Questionnaire" />
+
+    </LinearLayout>
+</ScrollView>
